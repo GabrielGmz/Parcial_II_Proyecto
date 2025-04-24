@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('login', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->int('id');
+            $table->string('nombre');
+            $table->string('email');
+            $table->string('password');
+            $table->string('rol');
         });
     }
 
