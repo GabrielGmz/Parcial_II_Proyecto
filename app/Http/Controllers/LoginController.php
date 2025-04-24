@@ -14,7 +14,7 @@ class UserController extends Controller
             'nombre' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:6',
-            'rol' => 'required|in:cliente,propietario,admin', // ajusta los roles válidos
+            'rol' => 'required|in:cliente,propietario,admin',
         ]);
 
         $user = User::create([

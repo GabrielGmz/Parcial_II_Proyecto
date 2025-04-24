@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('reservas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_user');
+            $table->foreignId('id_propiedad');
+            $table->logintex('fecha_inicio');
+            $table->logintex('fecha_fin');
+            $table->logintex('estado');
+            $table->logintex('metodo_pago');
+            $table->logintex('monto');
             $table->timestamps();
         });
     }
@@ -23,5 +30,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('reservas');
+
     }
 };
