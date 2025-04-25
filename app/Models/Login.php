@@ -20,4 +20,6 @@ class Login extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    protected $table = 'login';
 }
